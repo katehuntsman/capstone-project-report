@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints
+
+# Environments
+.env
+.venv
+venv/
+ENV/
+env.bak/
+*.env
+
+# IDEs
+.vscode/
+.idea/
+*.code-workspace
+
+# Mac system files
+.DS_Store
