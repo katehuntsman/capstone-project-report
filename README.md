@@ -6,6 +6,12 @@
 
 ---
 
+## Create/Activate Virtual Environment
+```
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
 ## Abstract
 
 This project looks at what makes social media posts go viral. We used data like likes, shares, comments, post type, and posting time to train some machine learning models that try to guess if a post will be viral or not. Virality here means the post’s views go over a certain number. The data was cleaned and explored before training models like Logistic Regression and Random Forest. We checked how well the models did using accuracy and F1 score. The results could help marketers and creators figure out how to get more engagement.
