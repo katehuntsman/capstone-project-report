@@ -57,6 +57,10 @@ We cleaned the data by removing missing info and duplicates. Categories were tur
 
 We explored the data to see how likes, shares, and comments vary across different post types, categories, and times. We used charts like histograms and boxplots to find trends.
 
+![Correlation Heatmap](screenshots/correlation_heatmap.png)
+![Distribution of Views](screenshots/distrib_of_views.png)
+![Post Frequency Over Time](screenshots/post_freq_over_time.png)
+
 ---
 
 ## Feature Engineering
@@ -69,9 +73,21 @@ We made some new features, such as:
 
 ---
 
-## Modeling and Evaluation
+## Predictive Analysis Overview
 
-We trained two models: Logistic Regression and Random Forest. We tuned them using GridSearchCV and checked their performance with accuracy, precision, recall, F1 score, and confusion matrices.
+This project focuses on predictive analysis to classify social media posts as viral or not viral based on engagement and content features. The core predictive models used are **Logistic Regression** and **Random Forest**.
+
+- **Model Rationale:** Logistic Regression was chosen for its interpretability and efficiency on classification tasks. Random Forest was selected to capture potential non-linear relationships and to provide feature importance insights.
+
+- **Data Preparation:** The target variable (`Viral`) is defined by labeling posts in the top 20% of views as viral. Categorical variables were encoded using ordinal mapping and one-hot encoding. Non-numeric columns were carefully handled to ensure compatibility with model inputs.
+
+- **Training & Testing:** The dataset was split into training and testing sets (80/20 split). Feature scaling using `StandardScaler` was applied for Logistic Regression. Hyperparameter tuning was performed using `GridSearchCV` to optimize model performance.
+
+- **Evaluation:** Models were evaluated on multiple metrics including accuracy, precision, recall, F1 score, and confusion matrices. Random Forest feature importance was visualized to identify the top predictors of virality.
+
+- **Implementation:** The full code pipeline includes data cleaning, feature engineering, encoding, train-test splitting, hyperparameter tuning, model training, evaluation, and visualization. The implementation is provided with detailed comments to demonstrate best practices.
+
+![Models](screenshots/log_randforest_models.png)
 
 ---
 
@@ -90,14 +106,6 @@ It seems posts made around *[insert time]* have a higher chance to go viral.
 ## Conclusion and Future Work
 
 This project shows that just looking at engagement data can help predict if a post will go viral. In the future, adding info like post text, images, or how platforms decide what to show could make predictions better.
-
----
-
-## Project Workflow
-
-![Project Workflow](figures/project_workflow.png)
-
-*Figure: Project workflow showing the main steps: data collection, cleaning, feature building, modeling, and evaluation.*
 
 ---
 
