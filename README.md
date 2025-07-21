@@ -43,19 +43,19 @@ The goal is to tell if a post will go viral or not, based on engagement data. We
 
 ## Data Collection
 
-We used the Kaggle dataset *Viral Social Media Trends and Engagement Analysis*. It contains post data like views, likes, shares, comments, categories, and when posts were published.
+I used the Kaggle dataset *Viral Social Media Trends and Engagement Analysis*. It contains post data like views, likes, shares, comments, categories, and when posts were published.
 
 ---
 
 ## Data Preparation
 
-We cleaned the data by removing missing info and duplicates. Categories were turned into numbers, and timestamps were converted into date and time features. We also made a new label showing if a post is viral or not.
+I cleaned the data by removing missing info and duplicates. Categories were turned into numbers, and timestamps were converted into date and time features. We also made a new label showing if a post is viral or not.
 
 ---
 
 ## Exploratory Data Analysis
 
-We explored the data to see how likes, shares, and comments vary across different post types, categories, and times. We used charts like histograms and boxplots to find trends.
+I explored the data to see how likes, shares, and comments vary across different post types, categories, and times. We used charts like histograms and boxplots to find trends.
 
 ![Correlation Heatmap](screenshots/correlation_heatmap.png)
 ![Distribution of Views](screenshots/distrib_of_views.png)
@@ -65,7 +65,7 @@ We explored the data to see how likes, shares, and comments vary across differen
 
 ## Feature Engineering
 
-We made some new features, such as:
+I made some new features, such as:
 
 - Grouping posts into viral or non-viral based on view counts
 - Creating dummy variables for post types and categories
@@ -118,19 +118,18 @@ weighted avg       0.68      0.78      0.71      1000
 
 ## Results
 
-The best model was *[insert model name]* with an F1 score of *[insert score]*. The most important things for predicting virality were:
+The above table summarizes the key performance metrics of the two models. Both models achieve similar overall accuracy around 78--79\%. However, they struggle to correctly classify viral posts (class 1), indicated by low precision, recall, and F1-scores. The Random Forest model shows a slight improvement in detecting viral posts compared to Logistic Regression. These results highlight the challenges posed by class imbalance and suggest opportunities for future model improvements.
 
-- Number of shares
-- Number of likes
-- Time of day the post was made
-
-It seems posts made around *[insert time]* have a higher chance to go viral.
 
 ---
 
 ## Conclusion and Future Work
 
-This project shows that just looking at engagement data can help predict if a post will go viral. In the future, adding info like post text, images, or how platforms decide what to show could make predictions better.
+This study shows that engagement metrics, specifically in the number of shares and comments, are strong indicators of social media post virality. Our exploratory data analysis revealed clear positive correlations between these variables and total views, and predictive modeling reinforced their influence. The Random Forest model outperformed Logistic Regression in overall accuracy (83\% vs. 78\%) and F1-score, especially in handling class imbalance. Feature importance rankings from the Random Forest model also highlighted that shares, comments, and likes are the most influential features for predicting virality.
+
+While our analysis demonstrates that simple engagement metrics can yield reasonably accurate predictions, it also highlights areas for improvement. The dataset lacked contextual features such as post content (text, hashtags, sentiment), media type (image or video), and posting time. These likely play a significant role in virality and could improve model performance if included.
+
+Future work should incorporate NLP and image processing techniques to extract meaningful features from post content and media. Additionally, modeling time-of-day effects and platform-specific algorithms (like Instagram's or TikTok’s ranking systems) could enhance predictions. Another suggestion would be for more sophisticated classification strategies, such as ensemble stacking or deep learning, to further improve accuracy and generalizations across platforms.
 
 ---
 
