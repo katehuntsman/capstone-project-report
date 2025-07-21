@@ -87,7 +87,32 @@ This project focuses on predictive analysis to classify social media posts as vi
 
 - **Implementation:** The full code pipeline includes data cleaning, feature engineering, encoding, train-test splitting, hyperparameter tuning, model training, evaluation, and visualization. The implementation is provided with detailed comments to demonstrate best practices.
 
+![Top 10 Rand](screenshots/top10.png)
+
 ![Models](screenshots/log_randforest_models.png)
+Logistic Regression Classification Report:
+```
+              precision    recall  f1-score   support
+
+           0       0.79      1.00      0.89       794
+           1       0.00      0.00      0.00       206
+
+    accuracy                           0.79      1000
+   macro avg       0.40      0.50      0.44      1000
+weighted avg       0.63      0.79      0.70      1000
+```
+
+Random Forest Classification Report:
+```
+              precision    recall  f1-score   support
+
+           0       0.79      0.97      0.88       794
+           1       0.23      0.03      0.05       206
+
+    accuracy                           0.78      1000
+   macro avg       0.51      0.50      0.46      1000
+weighted avg       0.68      0.78      0.71      1000
+```
 
 ---
 
