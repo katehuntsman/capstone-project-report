@@ -14,7 +14,7 @@ source .venv/bin/activate
 
 ## Abstract
 
-This project looks at what makes social media posts go viral. We used data like likes, shares, comments, post type, and posting time to train some machine learning models that try to guess if a post will be viral or not. Virality here means the post’s views go over a certain number. The data was cleaned and explored before training models like Logistic Regression and Random Forest. We checked how well the models did using accuracy and F1 score. The results could help marketers and creators figure out how to get more engagement.
+This project looks at what makes social media posts go viral. I used data like likes, shares, comments, post type, and posting time to train some machine learning models that try to guess if a post will be viral or not. Virality here means the post’s views go over a certain number. The data was cleaned and explored before training models like Logistic Regression and Random Forest. We checked how well the models did using accuracy and F1 score. The results could help marketers and creators figure out how to get more engagement.
 
 **Keywords:** social media analytics, virality prediction, machine learning, engagement metrics, data science
 
@@ -37,7 +37,7 @@ There are some limits, like not having the actual post text or images (hashtags,
 
 ## Problem Definition
 
-The goal is to tell if a post will go viral or not, based on engagement data. We define viral as having views above a certain threshold, so it’s a yes/no kind of prediction.
+The goal is to tell if a post will go viral or not, based on engagement data. I defined viral as having views above a certain threshold, so it’s a yes/no kind of prediction.
 
 ---
 
