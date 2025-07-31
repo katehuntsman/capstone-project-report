@@ -1,4 +1,4 @@
-# Going Viral: Predicting Social Media Post Virality Through Engagement Metrics
+# Going Viral: Predicting Social Media Post Virality
 
 **Author:** Kate E. Huntsman  
 **Affiliation:** Northwest Missouri State University, Maryville MO 64468, USA  
